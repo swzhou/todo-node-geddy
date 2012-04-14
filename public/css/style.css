@@ -29,3 +29,16 @@ body {
 .geddy-welcome-box .btn-large {
   margin-top: 20px;
 }
+
+.todo-item {
+	background: white;
+	border-bottom: 2px solid #CCC;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	margin-bottom: 10px;
+}
+
+.todo-item .status {
+	margin: 10px;
+	float: right;
+}

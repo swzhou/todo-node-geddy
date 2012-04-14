@@ -1,9 +1,9 @@
 <%
   var isUpdate = params.action == 'edit'
-    , formTitle = isUpdate ? 'Update this To Do Item' : 'Create a new To Do Item'
+    , formTitle = isUpdate ? '更新待办事项' : '添加待办事项' 
     , action = isUpdate ? '/todos/' + todo.id + '?_method=PUT' : '/todos'
     , deleteAction = isUpdate ? '/todos/' + todo.id + '?_method=DELETE' : ''
-    , btnText = isUpdate ? 'Update' : 'Add'
+    , btnText = isUpdate ? '更新' : '添加'
     , doneStatus = isUpdate ? 'checked' : ''
     , titleValue = isUpdate ? todo.title : ''
     , errors = params.errors;
@@ -39,8 +39,9 @@
     <div class="form-actions">
       <input type="submit" class="btn btn-primary" value="<%= btnText %>"/>
       <% if (isUpdate) { %>
-        <button type="submit" formaction="<%= deleteAction %>" formmethod="POST" class="btn btn-danger">Remove</button>
+        <button type="submit" formaction="<%= deleteAction %>" formmethod="POST" class="btn btn-danger">删除</button>
       <% } %>
+	  <a href="/todos" class="btn btn-small">取消</a>
     </div>
   </fieldset>
 </form>
